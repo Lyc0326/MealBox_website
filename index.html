@@ -22,18 +22,25 @@
     <button class="hamburger" onclick="toggleMenu()">
         ☰
     </button>
+    <script>
+        // 漢堡選單開關功能
+        function toggleMenu() {
+            const nav = document.querySelector('.nav-container');
+            nav.classList.toggle('active');
+        }
+    </script>
 
     <nav class="nav-container">
         <ul class="nav-list">
             <li class="nav-item"><a href="#" id="latestNewsBtn">最新資訊</a></li>
             <li class="nav-item"><a href="#menu-section">美味餐盒</a></li>
             <li class="nav-item"><a href="#ingredients-section">嚴選食材</a></li>
-            <li class="nav-item"><a href="farmer-info.html">小農資訊</a></li>
             <li class="nav-item special-item">
                 <span>其他資訊</span>
                 <ul class="dropdown">
-                    <li>合作品牌</li>
-                    <li>其他...</li>
+                    <li><a href="https://loopick.com.tw/" target="_blank">合作品牌</a></li>
+                    <li><a href="farmer-info.html">小農農產品</a></li>
+                    <li><a href="farmer-products.html">小農副產品</a></li>
                 </ul>
             </li>
         </ul>
@@ -62,18 +69,10 @@
     <script src="./modal.js" defer></script>
 </header>
 
-<script>
-    // 漢堡選單開關功能
-    function toggleMenu() {
-        const nav = document.querySelector('.nav-container');
-        nav.classList.toggle('active');
-    }
-</script>
-
     <!-- 跑馬燈 - 展銷資訊 -->
     <div class="marquee-container">
         <marquee id="marquee" behavior="scroll" direction="left" style="cursor: pointer;">
-            展銷資訊：本週新品登場！訂購滿500元免運費。
+            不NG聯盟餐盒將採用循環♻️再利用餐具，為🌍盡一份心力。預計將於12月底舉辦「校園快閃」活動，請密切注意最新資訊❗❗
         </marquee>
     </div>
 
@@ -82,8 +81,8 @@
         <div class="modal-content">
             <span class="close">&times;</span>
             <h2>展銷資訊詳情</h2>
-            <p>🎉 本週新品上架，多款新鮮蔬果及低GI餐點！</p>
-            <p>💡 現在訂購滿 500 元即可享受免運優惠。</p>
+            <p>🎉採用循環♻️再利用餐具 </p>
+            <p>💡預計將於12月第四週舉辦「校園快閃」活動 </p>
             <p>快來體驗我們的新產品，健康美味不容錯過！</p>
         </div>
     </div>
@@ -94,6 +93,11 @@
     <!-- Banner 區域 -->
     <section class="banner">
         <img src="banner.jpg" alt="美味餐盒">
+    </section>
+    
+    <!-- 警語區域 -->
+    <section class="banner-warning">
+        圖片為實體拍攝示意，餐盒材質、樣式以「循拾 Loopick」環保餐具實際提供為主
     </section>
 
     <!-- 餐盒菜單區 -->
@@ -141,7 +145,7 @@
             </div>
         </section>
 
-    <!-- 新鮮食材區 -->
+    <!-- 嚴選食材區 -->
     <section id="ingredients-section"></section>
         <section class="ingredients-section">
             <h2>季節嚴選食材</h2>
@@ -192,8 +196,8 @@
             <div class="footer-section contact">
                 <h3>聯絡我們</h3>
                 <p>地址：桃園市龜山區文化一路259號</p>
-                <p>電話：0920-090616</p>
-                <p>Email：regine843005@gmail.com</p>
+                <p>電話：02-1234-5678</p>
+                <p>Email：NoNG@gmail.com</p>
             </div>
 
             <!-- 快速連結 -->
@@ -223,7 +227,5 @@
             <p>© 2024 Not NG Alliance. All rights reserved.</p>
         </div>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
