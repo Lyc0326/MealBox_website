@@ -40,14 +40,14 @@ header {
 
 /* Logo 圖片 */
 .logo img {
-    height: 50px;
-    margin-right: 15px;
+    height: 40px;
+    margin-right: 10px;
 }
 
 /* 不NG聯盟字樣 - 綠色漸層 */
 .logo-text {
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 1.8rem;
     background: linear-gradient(45deg, #009005, #2ab155, #009005);
     
     /* 支援標準與 Webkit 瀏覽器的文字漸層 */
@@ -67,7 +67,7 @@ header {
 
 /* 懸停效果 - 放大與陰影加強 */
 .logo-text:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
     text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -79,7 +79,8 @@ header {
     border: none;
     font-size: 24px;
     cursor: pointer;
-    margin-right: 20px;
+    margin-left: 10px;
+    margin-right: 50px;
 }
 
 /* 導覽列 */
@@ -140,17 +141,26 @@ header {
     min-width: 150px;
 }
 
-.dropdown li {
-    padding: 8px 15px;
-    cursor: pointer;
-    white-space: nowrap;
+/* 下拉選單項目樣式 */
+.dropdown li a {
     color: #666;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.dropdown li:hover {
-    background-color: #ddd;
+/* 下拉選單項目懸停效果 */
+.dropdown li a:hover {
+    background-color:  #ddd;
     color: #000;
 }
+
+/* 增加下拉選單 li 之間的間距 */
+.dropdown li {
+    margin: 5px 0;
+}
+
 
 /* 特別項目 (Special Item) */
 .special-item {
@@ -198,14 +208,15 @@ header {
 
 /* 模態視窗 (Modal) */
 .modal {
-    display: none; /* 預設隱藏 */
+    display: none; /* 初始為隱藏狀態 */
     position: fixed;
     z-index: 1000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* 半透明背景 */
 }
 
 .modal-content {
@@ -232,6 +243,20 @@ header {
     width: 30px;
     height: 30px;
     margin-right: 10px;
+}
+
+/* 關閉按鈕 */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
 }
 
 /* === 手機響應設計 === */
@@ -292,9 +317,17 @@ marquee {
     display: block;
 }
 
+.banner-warning {
+    color: #666; /* 字樣顏色 */
+    font-size: 10px;
+    padding: 10px 10px;
+    text-align: right;
+    line-height: 1;
+}
+
 /* 餐盒菜單 */
 .menu-section {
-    padding: 20px;
+    padding: 50px;
     text-align: center;
 }
 
@@ -302,13 +335,12 @@ marquee {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 50px;
-    padding: 20px;
+    gap: 0px;
 }
 
 /* 單個菜單項目的樣式 */
 .menu-item {
-    width: 700px;
+    width: 60%;
     height: 100%;
     border: 1px solid #ddd;
     border-radius: 15px;
@@ -337,7 +369,7 @@ marquee {
 }
 
 .nutrition-table {
-    width: 90%; /* 使用100%寬度，適應父容器 */
+    width: 90%; /* 使用90%寬度，適應父容器 */
     border-collapse: collapse; /* 合併邊框 */
     margin: 30px auto;
 }
@@ -373,51 +405,25 @@ marquee {
 
 /* 懸停效果 */
 .menu-item:hover {
-    transform: scale(1.05);
+    transform: scale(1);
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* 模態視窗背景 */
-.modal {
-    display: none; /* 初始為隱藏狀態 */
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.5); /* 半透明背景 */
+/* 響應式設計 */
+@media (max-width: 768px) {
+    .menu-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-item {
+        width: 80%;
+    }
 }
 
-/* 模態視窗內容 */
-.modal-content {
-    background-color: #fff;
-    margin: 15% auto;
-    padding: 20px;
-    border-radius: 8px;
-    width: 80%;
-    max-width: 500px;
-    text-align: center;
-}
-
-/* 關閉按鈕 */
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.close:hover,
-.close:focus {
-    color: #000;
-}
-
-/* 新鮮食材區 */
+/* 嚴選食材 */
 .ingredients-section {
-    padding: 20px;
+    padding: 50px;
     text-align: center;
 }
 
@@ -425,14 +431,14 @@ marquee {
     text-align: center;
     margin-bottom: 20px;
     color: #333;
-    padding: 0px;
+    padding: 10px;
 }
 
 .ingredients-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 每行顯示兩個 */
+    row-gap: 15px;
+    justify-items: center;
 }
 
 .ingredient-item {
@@ -471,121 +477,13 @@ marquee {
     color: #555;
 }
 
-/* Footer 基本樣式 */
-.footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    margin-top: 20px;
-}
-
-.footer-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    flex-wrap: wrap; /* 支援換行 */
-}
-
-/* Footer 各區塊 */
-.footer-section {
-    flex: 1;
-    margin: 20px;
-    min-width: 200px; /* 手機端的最小寬度 */
-}
-
-.footer-section h3 {
-    font-size: 20px;
-    margin-bottom: 15px;
-    text-transform: uppercase;
-    border-bottom: 2px solid #e35700;
-    display: inline-block;
-    padding-bottom: 5px;
-}
-
-.footer-section p,
-.footer-section ul {
-    font-size: 16px;
-    line-height: 1.8;
-    margin: 0;
-    padding: 0;
-}
-
-.footer-section ul {
-    list-style-type: none;
-}
-
-.footer-section ul li {
-    margin: 8px 0;
-}
-
-.footer-section ul li a {
-    color: #ddd;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.footer-section ul li a:hover {
-    color: #f35d00;
-}
-
-/* 社群圖示 */
-.social-icons a {
-    margin: 0 10px;
-}
-
-.social-icons img {
-    width: 32px;
-    height: 32px;
-    transition: transform 0.3s;
-}
-
-.social-icons a:hover img {
-    transform: scale(1.2);
-}
-
-/* 底部版權區 */
-.footer-bottom {
-    background-color: #222;
-    padding: 10px 0;
-    margin-top: 20px;
-}
-
-.footer-bottom p {
-    margin: 0;
-    font-size: 14px;
-}
-
-/* 手機響應設計 */
+/* 手機響應調整 */
 @media (max-width: 768px) {
-    .footer-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .footer-section {
-        text-align: center;
-        margin-bottom: 20px;
-    }
-
-    .social-icons a {
-        margin: 0 5px;
+    .ingredients-container {
+        grid-template-columns: 1fr; /* 在小屏幕上每行顯示一個 */
     }
 }
 
-/* 響應式設計 */
-@media (max-width: 768px) {
-    .menu-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .menu-item {
-        width: 80%;
-    }
-}
 
 /* Footer 基本樣式 */
 .footer {
