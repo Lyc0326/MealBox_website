@@ -21,13 +21,13 @@ header {
 
 #latestNewsBtn {
     cursor: pointer;
-    transition: color 0.3s, transform 0.3s; /* 加入 transform 動畫 */
-    display: inline-block; /* 確保 transform 能正常運作 */
+    transition: color 0.3s, transform 0.3s;
+    display: inline-block;
 }
 
 #latestNewsBtn:hover {
     color: #f35d00;
-    transform: scale(1.1); /* 放大字體 */
+    transform: scale(1.1);
 }
 
 /* Logo 基本樣式 */
@@ -49,30 +49,19 @@ header {
     font-weight: bold;
     font-size: 1.8rem;
     background: linear-gradient(45deg, #009005, #2ab155, #009005);
-    
-    /* 支援標準與 Webkit 瀏覽器的文字漸層 */
     background-clip: text;
     -webkit-background-clip: text;
-
-    /* 透明填充以顯示漸層效果 */
     color: transparent;
     -webkit-text-fill-color: transparent;
-
-    /* 文字陰影 */
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
-
-    /* 平滑的動畫效果 */
     transition: transform 0.3s ease, text-shadow 0.3s ease;
 }
 
-/* 懸停效果 - 放大與陰影加強 */
 .logo-text:hover {
     transform: scale(1.05);
     text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-
-/* 漢堡按鈕 (手機端) */
 .hamburger {
     display: none;
     background: none;
@@ -103,21 +92,18 @@ header {
     position: relative;
 }
 
-/* 導覽列文字顏色（橘色），並設定點擊與懸停效果 */
 .nav-item a {
     text-decoration: none;
-    color: #e35700; /* 預設為橘色 */
+    color: #e35700;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
-/* 懸停效果：文字變亮 */
 .nav-item a:hover {
     color: #555;
     text-shadow: 2px 2px 4px rgba(100, 100, 100, 0.2);
 }
 
-/* 點擊時（:active）顏色變淡 */
 .nav-item a:active {
     color: #f35d00;
 }
@@ -150,13 +136,11 @@ header {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* 下拉選單項目懸停效果 */
 .dropdown li a:hover {
     background-color:  #ddd;
     color: #000;
 }
 
-/* 增加下拉選單 li 之間的間距 */
 .dropdown li {
     margin: 5px 0;
 }
@@ -185,30 +169,30 @@ header {
     border-radius: 5px;
     cursor: pointer;
     margin-right: 20px;
-    text-decoration: none; /* 移除底線 */
+    text-decoration: none;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .join-btn:hover {
-    background-color: #777; /* 懸停變色 */
+    background-color: #777;
 }
 
 .join-btn:active {
-    background-color: #999; /* 按下變色 */
-    transform: scale(0.95); /* 按下時縮小 */
+    background-color: #999;
+    transform: scale(0.95);
 }
 
 /* 手機版調整 */
 @media (max-width: 768px) {
     .join-btn {
-        display: block; /* 讓按鈕成為區塊元素 */
-        margin-bottom: 15px; /* 增加下方間距 */
+        display: block;
+        margin-bottom: 15px;
     }
 }
 
 /* 模態視窗 (Modal) */
 .modal {
-    display: none; /* 初始為隱藏狀態 */
+    display: none;
     position: fixed;
     z-index: 1000;
     left: 0;
@@ -216,7 +200,7 @@ header {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.5); /* 半透明背景 */
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .modal-content {
@@ -262,7 +246,7 @@ header {
 /* === 手機響應設計 === */
 @media (max-width: 768px) {
     .nav-container {
-        display: none; /* 預設隱藏在手機端 */
+        display: none;
         flex-direction: column;
         position: absolute;
         top: 60px;
@@ -273,7 +257,7 @@ header {
     }
 
     .nav-container.active {
-        display: flex; /* 點擊漢堡選單時展開 */
+        display: flex;
     }
 
     .nav-list {
@@ -286,7 +270,7 @@ header {
     }
 
     .hamburger {
-        display: block; /* 漢堡按鈕在手機端顯示 */
+        display: block;
     }
 
     .join-btn {
@@ -307,7 +291,7 @@ header {
 marquee {
     font-size: 15px;
     font-weight: bold;
-    cursor: pointer; /* 提示使用者可以點擊 */
+    cursor: pointer;
 }
 
 /* Banner */
@@ -318,7 +302,7 @@ marquee {
 }
 
 .banner-warning {
-    color: #666; /* 字樣顏色 */
+    color: #666;
     font-size: 10px;
     padding: 10px 10px;
     text-align: right;
@@ -351,17 +335,15 @@ marquee {
     background-color: #fff;
 }
 
-/* 圖片樣式 */
 .menu-item img {
-    width: 95%;  /* 圖片比框框略小，留出邊距 */
+    width: 95%;
     height: auto;
     object-fit: cover;
-    border-radius: 10px; /* 圓角邊框 */
-    margin: 10px auto; /* 讓圖片居中 */
+    border-radius: 10px;
+    margin: 10px auto;
     display: block;
 }
 
-/* 文字內容區域 */
 .menu-item h3 {
     margin: 15px 0;
     font-size: 1.5rem;
@@ -369,38 +351,29 @@ marquee {
 }
 
 .nutrition-table {
-    width: 90%; /* 使用90%寬度，適應父容器 */
-    border-collapse: collapse; /* 合併邊框 */
+    width: 90%;
+    border-collapse: collapse;
     margin: 30px auto;
 }
 
 .nutrition-table th,
 .nutrition-table td {
-    border: 1px solid #ddd; /* 單元格邊框 */
-    padding: 8px; /* 單元格內邊距 */
-    text-align: left; /* 左對齊文本 */
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
 }
 
 .nutrition-table th {
-    background-color: #f2f2f2; /* 標題行背景顏色 */
-    font-weight: bold; /* 加粗字體 */
+    background-color: #f2f2f2;
+    font-weight: bold;
 }
 
 .nutrition-table tr:nth-child(even) {
-    background-color: #f9f9f9; /* 偶數行背景顏色 */
+    background-color: #f9f9f9;
 }
 
 .nutrition-table tr:hover {
-    background-color: #f1f1f1; /* 滑鼠懸停效果 */
-}
-
-/* 價格樣式 */
-.menu-item .price {
-    margin-top: 10px;
-    font-weight: bold;
-    font-size: 1.2rem;
-    color: #059669;
-    margin-bottom: 20px;
+    background-color: #f1f1f1;
 }
 
 /* 懸停效果 */
@@ -436,7 +409,7 @@ marquee {
 
 .ingredients-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 每行顯示兩個 */
+    grid-template-columns: repeat(2, 1fr);
     row-gap: 15px;
     justify-items: center;
 }
@@ -455,7 +428,7 @@ marquee {
 .ingredient-item img {
     width: 60px;
     height: 60px;
-    border-radius: 50%; /* 圓形圖片 */
+    border-radius: 50%;
     margin-right: 15px;
 }
 
@@ -469,7 +442,7 @@ marquee {
 
 .ingredient-link:hover {
     color: #555;
-    transform: scale(1.05); /* 懸停時放大效果 */
+    transform: scale(1.05);
 }
 
 .ingredient-link i {
@@ -480,7 +453,7 @@ marquee {
 /* 手機響應調整 */
 @media (max-width: 768px) {
     .ingredients-container {
-        grid-template-columns: 1fr; /* 在小屏幕上每行顯示一個 */
+        grid-template-columns: 1fr
     }
 }
 
@@ -500,14 +473,14 @@ marquee {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
-    flex-wrap: wrap; /* 支援換行 */
+    flex-wrap: wrap;
 }
 
 /* Footer 各區塊 */
 .footer-section {
     flex: 1;
     margin: 20px;
-    min-width: 200px; /* 手機端的最小寬度 */
+    min-width: 200px;
 }
 
 .footer-section h3 {
@@ -627,34 +600,34 @@ marquee {
 }
 
 .farmer-link {
-    display: inline-flex; /* 圖示與文字水平排列 */
+    display: inline-flex;
     align-items: center;
-    gap: 5px; /* 圖示與文字間距 */
+    gap: 5px;
     font-size: 18px;
-    color: #7d55dc; /* 初始顏色 */
-    text-decoration: none; /* 移除底線 */
+    color: #7d55dc;
+    text-decoration: none;
     font-weight: bold;
     transition: color 0.3s, transform 0.3s;
 }
 
 .farmer-link i {
-    font-size: 15px; /* 調整圖示大小 */
+    font-size: 15px;
     transition: transform 0.3s ease;
 }
 
 .farmer-link:hover {
-    color: #4015a5; /* 懸停時顏色變亮 */
-    transform: scale(1.05); /* 懸停時放大效果 */
+    color: #4015a5;
+    transform: scale(1.05);
 }
 
 .farmer-link:hover i {
-    transform: rotate(10deg); /* 圖示懸停時微旋轉 */
+    transform: rotate(10deg);
 }
 
 .farmer-card p {
     color: #666;
-    text-align: left; /* 文字靠左對齊 */
-    margin:20px 0 20px 0; /* 調整內外邊距 */
+    text-align: left;
+    margin:20px 0 20px 0;
 }
 
 /* 導購連結樣式 */
@@ -662,7 +635,7 @@ marquee {
     display: inline-flex;
     align-items: center;
     text-decoration: none;
-    color: #059669;
+    color: #04a170;
     font-weight: bold;
     margin-top: 10px;
     transition: color 0.3s, transform 0.2s;
@@ -676,4 +649,195 @@ marquee {
 .purchase-link:hover {
     color: #036e50;
     transform: scale(1.05);
+}
+
+/* 小農副產品區 */
+.farmer-products-section {
+    padding: 30px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.farmer-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.farmer-card {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+.farmer-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.farmer-card h3 {
+    color: #e35700;
+    margin-bottom: 5px;
+}
+
+/* 手機響應設計 */
+@media (max-width: 768px) {
+    .farmer-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .farmer-card {
+        width: 90%;
+    }
+}
+
+/* 歷史展銷資訊區 */
+.history-section {
+    padding: 30px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.timeline {
+    position: relative;
+    margin: 0 auto;
+    max-width: 900px;
+    padding: 20px 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 4px;
+    height: 100%;
+    background-color: #e35700;
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    display: flex;
+    align-items: flex-start;
+    margin: 20px 0;
+    position: relative;
+}
+
+.timeline-item:nth-child(odd) {
+    flex-direction: row-reverse; /* 交錯排列 */
+}
+
+.timeline-dot {
+    width: 15px;
+    height: 15px;
+    background-color: #e35700;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 20px;
+    z-index: 2;
+}
+
+.timeline-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    width: 45%;
+    margin: 0 10px;
+    position: relative;
+}
+
+.timeline-header {
+    margin-bottom: 10px;
+}
+
+.timeline-date {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #555;
+    background-color: #f3f3f3;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-content h3 {
+    color: #e35700;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.timeline-content p {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.more-link {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: #04a170;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.more-link i {
+    margin-right: 5px;
+}
+
+.more-link:hover {
+    color: #036e50;
+    transform: scale(1.05);
+}
+
+/* 手機響應設計 */
+@media (max-width: 768px) {
+    .timeline {
+        padding: 10px 0;
+    }
+
+    .timeline::before {
+        left: 20px;
+    }
+
+    .timeline-item {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 40px;
+    }
+
+    .timeline-dot {
+        left: 20px;
+    }
+
+    .timeline-content {
+        width: 80%;
+        margin-left: 40px;
+    }
+
+    .timeline-date {
+        left: auto;
+        top: -10px;
+        transform: none;
+        margin-left: 40px;
+    }
 }
