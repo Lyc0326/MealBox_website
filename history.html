@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>歷史展銷資訊</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.png" type="image/png">
+</head>
+<body>
+<!-- Header -->
+<header class="header">
+    <div class="logo" onclick="window.location.href='index.html'">
+        <img src="logo.png" alt="不NG聯盟">
+        <span class="logo-text">不NG聯盟</span>
+    </div>    
+
+    <!-- 漢堡按鈕（手機端用） -->
+    <button class="hamburger" onclick="toggleMenu()">
+        ☰
+    </button>
+    <script>
+        // 漢堡選單開關功能
+        function toggleMenu() {
+            const nav = document.querySelector('.nav-container');
+            nav.classList.toggle('active');
+        }
+    </script>
+
+    <nav class="nav-container">
+        <ul class="nav-list">
+            <li class="nav-item"><a href="index.html">最新資訊</a></li>
+            <li class="nav-item"><a href="index.html">美味餐盒</a></li>
+            <li class="nav-item"><a href="index.html">嚴選食材</a></li>
+            <li class="nav-item special-item">
+                <span>其他資訊</span>
+                <ul class="dropdown">
+                    <li><a href="farmer-info.html">小農農產品</a></li>
+                    <li><a href="farmer-products.html">小農副產品</a></li>
+                    <li><a href="history.html">歷史展銷資訊</a></li>
+                    <li><a href="https://loopick.com.tw/" target="_blank">合作品牌</a></li>
+                    <li><a href="feedback.html">顧客回饋區</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <button id="joinButton" class="join-btn">我要購買</button>
+
+    <!-- 模態視窗 (Modal) -->
+    <div id="joinModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>購買連結</h2>
+            <p>歡迎光臨不NG聯盟！點擊下方選擇購買方式：</p>
+            <a href="https://forms.gle/your-google-form-link" target="_blank" class="modal-link">
+                <img src="google.png" alt="Google表單" class="modal-icon">
+                Google 表單
+            </a>
+            <a href="#" target="_blank" class="modal-link">
+                <img src="linecolor.png" alt="LINE預購" class="modal-icon">
+                LINE 預購
+            </a>
+        </div>
+    </div>
+
+    <!-- 引用 modal.js 檔案 -->
+    <script src="./modal.js" defer></script>
+</header>
+
+<!-- 歷史展銷資訊內容 -->
+<section class="history-section">
+    <h2>歷史展銷資訊</h2>
+    <div class="timeline">
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <div class="timeline-header">
+                    <span class="timeline-date">2024/09/15 - 2024/09/17</span>
+                </div>
+                <h3>2024 秋季展銷會</h3>
+                <p>地點：台北小農市集<br>活動亮點：展示小農最新的有機產品，現場試吃並享有特價。</p>
+                <a href="https://example.com/autumn-sale" class="more-link" target="_blank">
+                    <i class="fas fa-info-circle"></i> 詳細資訊
+                </a>
+            </div>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <div class="timeline-header">
+                    <span class="timeline-date">2024/03/10 - 2024/03/12</span>
+                </div>
+                <h3>2024 春季農產展</h3>
+                <p>地點：宜蘭文化中心<br>活動亮點：宜蘭地區小農合作，推廣當地特色農產。</p>
+                <a href="https://example.com/spring-sale" class="more-link" target="_blank">
+                    <i class="fas fa-info-circle"></i> 詳細資訊
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-section contact">
+            <h3>聯絡我們</h3>
+            <p>地址：桃園市龜山區文化一路259號</p>
+            <p>電話：02-1234-5678</p>
+            <p>Email：NoNG@gmail.com</p>
+        </div>
+        <div class="footer-section quick-links">
+            <h3>快速連結</h3>
+            <ul>
+                <li><a href="#">關於我們</a></li>
+                <li><a href="#">最新消息</a></li>
+                <li><a href="#">小農資訊</a></li>
+                <li><a href="#">常見問題</a></li>
+            </ul>
+        </div>
+        <div class="footer-section social-media">
+            <h3>追蹤我們</h3>
+            <div class="social-icons">
+                <a href="#"><img src="facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="line.png" alt="LINE"></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2024 Not NG Alliance. All rights reserved.</p>
+    </div>
+</footer>
+</body>
+</html>
